@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="images/logo.jpg" sizes="16x16">
+    <script type="text/javascript" src="/js/imagefiles.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Elections AEIG-INDE 2020</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="css/vote.css">
+</head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html"><img src="images/logo.jpg" alt="AEIG-logo" width="50" height="50"> AEIG-INDE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html"><i class="fa fa-store-alt "></i> ACCEUIL
+                  <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="connection.html"><i class="fa fa-lock "></i> Espace CEI
+                  <span class="sr-only"></span>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    
+    <div class="container py-5 mt-2">
+        <form action="success.html" onsubmit="return checkboxes()">
+        <div class="row justify-content-center py-5">
+                <div class="col-md-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/dr.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">DIDIER DROGBA</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <input type="checkbox" class="checkboxlarge" name="checkBox2" style="zoom:5; padding: 20px;" > 
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/sory.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">SORY DIABATE</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <input type="checkbox" class="checkboxlarge" name="checkBox2" style="zoom:5; padding: 20px;" > 
+                        </div>
+                      </div>
+                </div>
+           
+          </div>
+          <input type="submit" class="form-control btn btn-success" value="VOTER" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
+        </form>
+        </div>
+        <script>
+function checkboxes()
+  {
+   var inputElems = document.getElementsByTagName("input"),
+    count = 0;
+
+    for (var i=0; i<inputElems.length; i++) 
+    {       
+       if (inputElems[i].type == "checkbox" && inputElems[i].checked == true)
+       {
+          count++;
+       }
+    }
+    if(count==0)
+    {
+      var r = confirm("ALERTE: BULLETIN NUL\n vous n'avez sélectionné aucun candidat,\n votre vote sera considéré comme nul.\n\ncliquez sur Cancel pour annuler\ncliquez sur OK pour confirmer");
+      if (r == true) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+    else if(count>1)
+    {
+      
+      var r = confirm("ALERTE: BULLETIN NUL\n vous avez sélectionné plus d'un candidat,\n votre vote sera considéré comme nul.\n\ncliquez sur Cancel pour annuler\ncliquez sur OK pour confirmer");
+      if (r == true) {
+        return true;
+        } else {
+          return false;
+        }
+      }
+    }
+        </script>
+  </body>
+      <hr>
+      <!-- Footer -->
+<footer class="page-footer font-small pieds">
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-2 pieds">© 2020 Copyright:
+  <a href="#">AEIG-INDE</a>
+</div>
+<!-- Copyright -->
+
+
+</footer>
+<!-- Footer -->
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </body>
+</html>
+  
